@@ -7,9 +7,9 @@ env:
 on: 
   push:
          branches: 
-               - chetan
+               - main
 
-jobs:       Zuq452aaybcP2f2ncqLS2O14
+jobs:       
      Deploy-production: 
         runs-on: ubuntu-latest
         steps:
