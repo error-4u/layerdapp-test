@@ -1,0 +1,30 @@
+name : Vercel deployment
+
+env: 
+   VERCEL_ORG_ID : ${{secrets.VERCEL_ORG_ID}}
+   VERCEL_PROJECT_ID : ${{secrets.VERCEL_PROJECT_ID}}
+
+on: 
+  push:
+         branches: 
+               - chetan
+
+jobs:       Zuq452aaybcP2f2ncqLS2O14
+     Deploy-production: 
+        runs-on: ubuntu-latest
+        steps:
+
+           -uses: actions/checkout@v3
+
+           -namae: Install vercel cli
+            run: npm install --global vercel
+
+
+           -namae: Pull Vercel Environment Information
+            run: vercel pill --yes --environment=production --token=${{secrets.VERCEL_TOKEN}}
+
+           -namae: Build Project Artifacts
+            run: vercel build --prebuilt --prod --token=${{secrets.VERCEL_TOKEN}}  
+
+           -namae: Deploy Project Artifacts
+            run: vercel deploy --prebuilt --prod --token=${{secrets.VERCEL_TOKEN}}   

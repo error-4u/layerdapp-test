@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+body {
+  width: 100vw;
+}
+
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* for the mobile navbar */
+.hide {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 1s, transform 1s;
+}
+
+.reveal-bar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+*::-webkit-scrollbar {
+  width: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.background-img {
+  background: url(../Group.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-attachment: scroll;
+  background-size: auto;
+}
+
+@layer utilities {
+  @layer responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+/************************ SWITCH THEME */
+.toggle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+}
+
+.input {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}
+
+/************************ LOGO SLIDE */
+
+.slides-wrapper_settings {
+  animation-name: sliding-x;
+  animation-timing-function: linear;
+  display: flex;
+  animation-duration: 10s;
+  animation-direction: normal;
+  animation-play-state: running;
+  height: auto;
+  width: auto;
+  animation-iteration-count: infinite;
+}
+@keyframes sliding-x {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-130%);
+  }
+}
+
+.animation_settings {
+  animation-name: sliding-y;
+  animation-timing-function: linear;
+  display: flex;
+  animation-duration: 15s;
+  animation-direction: normal;
+  animation-play-state: running;
+  height: fit-content;
+  width: auto;
+  animation-iteration-count: infinite;
+}
+@keyframes sliding-y {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-60%);
+  }
+}
+.animation_settings2 {
+  animation-name: sliding-y-2;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-direction: normal;
+  animation-play-state: running;
+  height: fit-content;
+  width: auto;
+  animation-iteration-count: infinite;
+}
+@keyframes sliding-y-2 {
+  0% {
+    transform: translateY(-60%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
