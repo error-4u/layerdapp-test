@@ -23,7 +23,7 @@ jobs:
         run: vercel pull --yes --environment=production --token=${{secrets.VERCEL_TOKEN}}
 
       - name: Generate Prebuilt Output
-        run: vercel build
+        run: vercel --prebuilt --prod
 
       - name: Deploy Project Artifacts
         run: vercel deploy --prebuilt --prod --token=${{secrets.VERCEL_TOKEN}}
