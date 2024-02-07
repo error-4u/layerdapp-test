@@ -36,7 +36,7 @@ function Hero() {
                 realm, effortlessly bridging diverse protocols. Transform
                 intricate strategies into intuitive actions, and unlock a world
                 of decentralized opportunities with unparalleled precision and
-                security. i am chetan kumar prasad adsf
+                security. i am chetan kumar prasad adsf sd
               </p>
               <div className="flex items-center justify-center lg:justify-start gap-3 mt-11">
                 <a
