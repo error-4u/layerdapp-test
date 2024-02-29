@@ -22,51 +22,107 @@ function Footer() {
       sectionObserver.observe(sectionRef.current);
     }
   }, []);
-  return (
-    <footer className="bg-white text-graytext dark:bg-secondary">
-      <div
-        className="max-w-6xl mx-auto py-8 px-2 border-t border-t-graytext/20 section"
-        ref={sectionRef}
-      >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 gap-10">
-          {/* Logo Section */}
-          <div className="flex flex-col items-start lg:w-1/2 px-[5%] lg:px-[1%]">
-            <a href="" className="flex items-end justify-center">
-              <img
-                src="../../logo.png"
-                alt="logo"
-                className="w-full h-7 object-contain"
-              />
-              <img
-                src="../../LayerDapp.png"
-                alt="logo"
-                className="w-25 h-5 object-contain -pb-2"
-              />
-            </a>
 
-            <div className="mt-2 text-left lg:mt-[2rem]">
-              &copy; 2023 Layerdapp. All rights reserved
+  return (
+    <footer
+      className="flex flex-col bg-dark-footer"
+      style={{
+        color: "white",
+        backgroundColor: "rgb(25 33 50)",
+      }}
+    >
+      <div
+        className=" mx-5  py-8 px-20 border-t section items-center justify-around "
+        ref={sectionRef}
+        style={{ borderColor: "rgba(0, 0, 0, 0.2)" }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          {/* Logo Section */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+              width: "50%",
+              padding: "0 5%",
+              lgPadding: "0 1%",
+            }}
+          >
+            <div
+              style={{
+                marginTop: "2px",
+                textAlign: "left",
+                lgMarginTop: "2rem",
+              }}
+            >
+              &copy; 2023 Flix. All rights reserved
             </div>
           </div>
 
           {/* Sections Container */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-0 px-[5%] lg:px-[1%] ">
+          <div
+            className="grid grid-cols-3 items-center justify-center"
+            style={{
+              width: "100%",
+
+              gap: "1px",
+              mdGap: "0",
+              padding: "0 5%",
+              lgPadding: "0 1%",
+            }}
+          >
             {/* Resources Section */}
-            <div className="w-full">
-              <h3 className="text-lg font-bold mb-3">Resources</h3>
-              <ul>
+            <div style={{ lineHeight: "1.7" }}>
+              <h3
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Resources
+              </h3>
+              <ul
+                style={{
+                  listStyle: "none",
+                  paddingLeft: "0",
+                  marginTop: "0",
+                  marginBottom: "0",
+                }}
+              >
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     Tutorials
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     Newsletter
                   </a>
                 </li>
@@ -74,21 +130,57 @@ function Footer() {
             </div>
 
             {/* Company Section */}
-            <div className="w-full">
-              <h3 className="text-lg font-bold mb-3">Company</h3>
-              <ul>
+            <div style={{ lineHeight: "1.7" }}>
+              <h3
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Company
+              </h3>
+              <ul
+                style={{
+                  listStyle: "none",
+                  paddingLeft: "0",
+                  marginTop: "0",
+                  marginBottom: "0",
+                }}
+              >
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     Our Socials
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="#"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      ":hover": { color: "gray" },
+                    }}
+                  >
                     Privacy Policy
                   </a>
                 </li>
@@ -96,19 +188,65 @@ function Footer() {
             </div>
 
             {/* Contact Us Section */}
-            <div className="w-full">
-              <h3 className="text-lg font-bold mb-3">Contact Us</h3>
-              <ul className="flex flex-col space-y-2">
-                <li className="flex items-center hover:text-gray-300">
-                  <AiTwotoneMail className="mr-2" />
-                  <a href="mailto:info@example.com">info@example.com</a>
+            <div style={{}}>
+              <h3
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Contact Us
+              </h3>
+              <ul
+                style={{
+                  listStyle: "none",
+                  paddingLeft: "0",
+                  marginTop: "0",
+                  marginBottom: "0",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "6px",
+                }}
+              >
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    ":hover": { color: "gray" },
+                  }}
+                >
+                  <AiTwotoneMail style={{ marginRight: "5px" }} />
+                  <a
+                    href="mailto:info@example.com"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    info@example.com
+                  </a>
                 </li>
-                <li className="flex items-center hover:text-gray-300">
-                  <AiFillPhone className="mr-2" />
-                  <a href="tel:+123456789">+123456789</a>
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    ":hover": { color: "gray" },
+                  }}
+                >
+                  <AiFillPhone style={{ marginRight: "5px" }} />
+                  <a
+                    href="tel:+123456789"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    +123456789
+                  </a>
                 </li>
-                <li className="flex items-start hover:text-gray-300">
-                  <AiFillHome className="mr-2" />
+                <li
+                  style={{
+                    display: "flex",
+                    alignItems: "start",
+                    ":hover": { color: "gray" },
+                  }}
+                >
+                  <AiFillHome style={{ marginRight: "5px" }} />
                   123 Main St, New Delhi
                 </li>
               </ul>
